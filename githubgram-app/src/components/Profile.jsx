@@ -1,18 +1,18 @@
 import React from 'react';
 import style from './profile.module.css';
-import mockup from "./../assets/mockup";
+import mockup from './../assets/mockup';
 
-export default function Profile() {
+export default function Profile(profileData) {
     return (
         <section className={style.profileSection}>
             <div className={style.profileContainer}>
                 <div className={style.avatar}>
-                    <img src={mockup.avatar} />
+                    <img src={profileData.avatar} />
                 </div>
                 <div className={style.stats}>
                     <div className={style.info}>
                         <div className={style.number}>
-                            <p>35</p>
+                            <p>{profileData.repositories}</p>
                         </div>
                         <div className={style.text}>
                             <p>Repositories</p>
@@ -20,7 +20,7 @@ export default function Profile() {
                     </div>
                     <div className={style.info}>
                         <div className={style.number}>
-                            <p>761</p>
+                            <p>{profileData.followers}</p>
                         </div>
                         <div className={style.text}>
                             <p>Followers</p>
@@ -28,7 +28,7 @@ export default function Profile() {
                     </div>
                     <div className={style.info}>
                         <div className={style.number}>
-                            <p>1.118</p>
+                            <p>{profileData.following}</p>
                         </div>
                         <div className={style.text}>
                             <p>Following</p>
@@ -37,9 +37,19 @@ export default function Profile() {
                 </div>
             </div>
             <div className={style.descriptionContainer}>
-                <h1 className={style.name}>{mockup.name}</h1>
-                <p className={style.nickname}>{mockup.nickname}</p>
-                <p className={style.bio}>{mockup.bio}</p>
+                <h1 className={style.name}>{profileData.name}</h1>
+                <p className={style.nickname}>{profileData.nickname}</p>
+                <p className={style.bio}>{profileData.bio}</p>
+            </div>
+            <div className={style.socialMediaContainer}>
+                <button className={style.buttonContainer}>
+                    <img src={mockup.twitterLogo}/>
+                    <p>Visit {profileData.nickname}'s twitter</p>
+                </button>
+                <button className={style.buttonContainer}>
+                    <img src={mockup.ubicationIcon} className={style.locationIcon}/>
+                    <p>Discover {profileData.locationIcon}</p>
+                </button>
             </div>
         </section>
     )

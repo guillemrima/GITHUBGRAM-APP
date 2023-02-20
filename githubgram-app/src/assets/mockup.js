@@ -1,8 +1,6 @@
-import avatar from "./img/avatar.jpg"
-
+import twitterLogo from "./img/twitterlogo.webp"
+import ubicationIcon from "./img/ubicationIcon.png"
 export default {
-    "avatar": avatar,
-    "nickname": "guillemrima",
-    "name": "Guillem Rivas Martorell",
-    "bio": "🏆 Junior front-end developer. 📖Currently learnig Javascript. 🌴Mallorca, Spain."
+    "twitterLogo" : twitterLogo,
+    "ubicationIcon" : ubicationIcon
 }

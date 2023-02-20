@@ -13,7 +13,6 @@ body{
 
 .profileContainer{
     display: flex;
-    border: 2px solid red;
 }
 
 .profileContainer > .avatar {
@@ -22,7 +21,7 @@ body{
     background-color: black;
     border-radius: 100%;
     overflow: hidden;
-    border: 2px solid red;
+    border: 1px solid rgb(183, 183, 183);
 
 }
 
@@ -35,14 +34,12 @@ body{
 .profileContainer > .stats {
     display: flex;
     margin: auto;
-    border: 2px solid red;
 }
 
 .stats > .info {
     text-align: center;
     font-size: 1rem;
     margin: 10px;
-    border: 2px solid red;
 }
 
 .info > .number {
@@ -54,7 +51,6 @@ body{
 }
 
 .descriptionContainer {
-    border: 2px solid red;
     padding-right: 40%;
     margin-top: var(--marginGeneral);
 }
@@ -70,4 +66,37 @@ body{
 
 .descriptionContainer > .bio {
     font-size: 0.9rem;
+}
+
+.socialMediaContainer {
+    display: flex;
+}
+
+.socialMediaContainer > .buttonContainer {
+    height: 30px;
+    width: 100%;
+    display: flex;
+    margin: auto;
+    background-color: #efefef;
+    border: none;
+    padding: 9px;
+    border-radius: 7px;
+    margin: 0px 5px;
+    margin-top: var(--marginGeneral);
+    align-items: center;
+}
+
+.buttonContainer > img {
+    width: 20px;
+}
+
+.buttonContainer > p {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #535353;
+    margin-left: 5px;
+}
+
+.buttonContainer > .locationIcon {
+    width: 20px;
 }
