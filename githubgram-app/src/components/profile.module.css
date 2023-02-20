@@ -76,6 +76,7 @@ body{
     height: 30px;
     width: 100%;
     display: flex;
+    justify-content: center;
     margin: auto;
     background-color: #efefef;
     border: none;
@@ -91,12 +92,12 @@ body{
 }
 
 .buttonContainer > p {
-    font-size: 0.8rem;
+    font-size: 0.7rem;
     font-weight: 600;
     color: #535353;
     margin-left: 5px;
 }
 
-.buttonContainer > .locationIcon {
-    width: 20px;
+.separationSection {
+    margin-top: var(--marginGeneral);
 }

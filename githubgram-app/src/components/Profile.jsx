@@ -48,9 +48,10 @@ export default function Profile(profileData) {
                 </button>
                 <button className={style.buttonContainer}>
                     <img src={mockup.ubicationIcon} className={style.locationIcon}/>
-                    <p>Discover {profileData.locationIcon}</p>
+                    <p>Discover {profileData.location}</p>
                 </button>
             </div>
+            <hr className={style.separationSection}></hr>
         </section>
     )
 }

@@ -1,6 +1,7 @@
 import React from 'react'
 import Profile from './components/Profile'
 import { useEffect, useState } from 'react'
+import RepositoresGallery from './components/RepositoriesGallery';
 
 export default function App() {
 
@@ -14,7 +15,7 @@ export default function App() {
         }
         fetchData();
     }, []);
-    
+
     return (
         <>
             <Profile 
@@ -27,6 +28,7 @@ export default function App() {
                 avatar={profileData.avatar_url}
                 location={profileData.location}
             />
+            <RepositoresGallery />
         </>
     )
 }
