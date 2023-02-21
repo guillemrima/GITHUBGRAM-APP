@@ -2,6 +2,7 @@ import React from 'react'
 import { useEffect, useState } from 'react'
 import Profile from './components/Profile'
 import mockupDefault from './assets/mockup'
+import Navbar from './components/Navbar';
 
 export default function App() {
 
@@ -28,6 +29,7 @@ export default function App() {
                 avatar={profileData.avatar_url}
                 location={profileData.location}
             />
+            <Navbar />
         </>
     )
 }

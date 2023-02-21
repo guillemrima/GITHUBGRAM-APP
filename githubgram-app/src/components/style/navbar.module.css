@@ -1,0 +1,47 @@
+
+.navbarSection {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.navbarContainer {
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 70px;
+}
+
+.navbarContainer > .userElement {
+    height: 30px;
+    width: 30px;
+}
+
+.userElement > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.navbarContainer > .searchElement {
+    height: 30px;
+    width: 30px;
+}
+
+.searchElement > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.navbarContainer > .homeElement {
+    height: 30px;
+    width: 30px;
+}
+
+.homeElement > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}

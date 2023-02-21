@@ -7,11 +7,12 @@
 :root{
     --marginGeneral : 10px;
 }
-body{
-    padding: 15px;
+
+.profileSection {
+    margin: 15px;
 }
 
-.profileContainer{
+.profileContainer {
     display: flex;
 }
 
