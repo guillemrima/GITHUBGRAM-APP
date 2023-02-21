@@ -1,11 +1,11 @@
 import React from 'react'
-import Profile from './components/Profile'
 import { useEffect, useState } from 'react'
-import RepositoresGallery from './components/RepositoriesGallery';
+import Profile from './components/Profile'
+import mockupDefault from './assets/mockup'
 
 export default function App() {
 
-    const [profileData, setProfileData] = useState([]);
+    const [profileData, setProfileData] = useState(mockupDefault);
 
     useEffect(() => {
         async function fetchData() {
@@ -28,7 +28,6 @@ export default function App() {
                 avatar={profileData.avatar_url}
                 location={profileData.location}
             />
-            <RepositoresGallery />
         </>
     )
 }

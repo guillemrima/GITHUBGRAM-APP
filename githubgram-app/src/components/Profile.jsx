@@ -1,6 +1,6 @@
 import React from 'react';
-import style from './profile.module.css';
-import mockup from './../assets/mockup';
+import style from './style/profile.module.css';
+import icon from './../assets/icons';
 
 export default function Profile(profileData) {
     return (
@@ -43,11 +43,11 @@ export default function Profile(profileData) {
             </div>
             <div className={style.socialMediaContainer}>
                 <button className={style.buttonContainer}>
-                    <img src={mockup.twitterLogo}/>
+                    <img src={icon.twitterLogo}/>
                     <p>Visit {profileData.nickname}'s twitter</p>
                 </button>
                 <button className={style.buttonContainer}>
-                    <img src={mockup.ubicationIcon} className={style.locationIcon}/>
+                    <img src={icon.ubicationIcon} className={style.locationIcon}/>
                     <p>Discover {profileData.location}</p>
                 </button>
             </div>
