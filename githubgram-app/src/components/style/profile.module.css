@@ -88,6 +88,7 @@
     margin: 0px 5px;
     margin-top: var(--marginGeneral);
     align-items: center;
+    box-shadow: 0 4px 5px -2px rgb(159, 159, 159);
 }
 
 .buttonContainer > img {

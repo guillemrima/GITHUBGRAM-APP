@@ -1,5 +1,4 @@
 .repogallerySection{
     height: 63vh;
     overflow: scroll;
-    z-index: -1;
 }
