@@ -11,24 +11,24 @@ export default function App() {
     const [repoData, setRepoData] = useState([mockupRepoDefault]);
     const [apiCallSuccess, setApiCallSuccess] = useState(false);
 
-    useEffect(() => {
-        async function fetchData() {
-            const response = await fetch("https://api.github.com/users/guillemrima");
-            const data = await response.json();
-            setProfileData(data);
-        }
-        fetchData();
-    }, []);
+    // useEffect(() => {
+    //     async function fetchData() {
+    //         const response = await fetch("https://api.github.com/users/Dualvicc");
+    //         const data = await response.json();
+    //         setProfileData(data);
+    //     }
+    //     fetchData();
+    // }, []);
 
 
-    useEffect(() => {
-        async function fetchData() {
-            const response = await fetch("https://api.github.com/users/guillemrima/repos");
-            let data = await response.json();
-            setRepoData(data);
-        }
-        fetchData();
-    }, []);
+    // useEffect(() => {
+    //     async function fetchData() {
+    //         const response = await fetch("https://api.github.com/users/guillemrima/repos");
+    //         let data = await response.json();
+    //         setRepoData(data);
+    //     }
+    //     fetchData();
+    // }, []);
 
     return (
         <>
@@ -41,6 +41,7 @@ export default function App() {
                 bio={profileData.bio}
                 avatar={profileData.avatar_url}
                 location={profileData.location}
+                twitter={profileData.twitter_username}
             />
             <Repogallery repoList = {repoData}/>
 

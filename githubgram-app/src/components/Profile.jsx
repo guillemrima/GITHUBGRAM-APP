@@ -1,8 +1,20 @@
 import React from 'react';
 import style from './style/profile.module.css';
 import icon from './../assets/icons';
+import { useState } from 'react';
 
 export default function Profile(profileData) {
+    const twitterEl = document.getElementById('twitterEl');
+    const [opacityButton, setOpacityButton] = useState(1);
+
+    function blockTwitterRef() {
+    if(profileData.twitter != null){
+        twitterEl.href = `https://twitter.com/${profileData.twitter}`
+    }else{setOpacityButton(0.5)}
+    }
+    
+    window.addEventListener("load", blockTwitterRef)
+
     return (
         <section className={style.profileSection}>
             <div className={style.mainContainer}>
@@ -43,13 +55,13 @@ export default function Profile(profileData) {
                     <p className={style.bio}>{profileData.bio}</p>
                 </div>
                 <div className={style.socialMediaContainer}>
-                    <button className={style.buttonContainer}>
+                    <button id="twitterContainer" className={style.buttonContainer} style={{opacity : opacityButton}}>
                         <img src={icon.twitterLogo}/>
-                        <p>Visit {profileData.nickname}'s twitter</p>
+                        <a id="twitterEl">Visit {profileData.nickname}'s twitter</a>
                     </button>
                     <button className={style.buttonContainer}>
                         <img src={icon.ubicationIcon} className={style.locationIcon}/>
-                        <p>Discover {profileData.location}</p>
+                        <a>Discover {profileData.location}</a>
                     </button>
                 </div>
                 <hr className={style.separationSection}></hr>
