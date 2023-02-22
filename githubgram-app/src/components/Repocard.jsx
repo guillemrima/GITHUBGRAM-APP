@@ -1,5 +1,4 @@
 import React from "react";
-import mockup from "../assets/repomockup"
 import icon from './../assets/icons';
 import style from './style/repocard.module.css'
 

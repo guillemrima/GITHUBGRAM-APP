@@ -8,9 +8,10 @@
     --marginGeneral : 10px;
 }
 
-.profileSection {
+
+.mainContainer {
     margin: 15px;
-    height: 25.3vh;
+    margin-bottom: 0;
 }
 
 .profileContainer {

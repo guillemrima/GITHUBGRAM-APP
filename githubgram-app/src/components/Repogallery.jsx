@@ -5,7 +5,7 @@ import style from "./style/repogallery.module.css"
 export default function Repogallery(repoData){
     const repoList = repoData.repoList;
     const repoCard = repoList.map(repoItem => {
-        return (            
+        return (         
         <Repocard
             key={repoItem.name}
             repo_name={repoItem.name}
@@ -18,15 +18,6 @@ export default function Repogallery(repoData){
 
     return (
         <section className={style.repogallerySection}>
-            {repoCard}
-            {repoCard}
-            {repoCard}
-            {repoCard}
-            {repoCard}
-            {repoCard}
-            {repoCard}
-            {repoCard}
-            {repoCard}
             {repoCard}
         </section>
     )
