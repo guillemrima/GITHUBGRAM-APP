@@ -2,30 +2,33 @@ import React from 'react'
 import { useEffect, useState } from 'react'
 import Profile from './components/Profile'
 import mockupDefault from './assets/mockup'
+import mockupRepoDefault from './assets/repomockup'
 import Navbar from './components/Navbar';
-import Repocard from './components/Repocard';
+import Repogallery from './components/Repogallery';
 
 export default function App() {
     const [profileData, setProfileData] = useState(mockupDefault);
+    const [repoData, setRepoData] = useState([mockupRepoDefault]);
+    const [apiCallSuccess, setApiCallSuccess] = useState(false);
 
-    useEffect(() => {
-        async function fetchData() {
-            const response = await fetch("https://api.github.com/users/guillemrima");
-            const data = await response.json();
-            setProfileData(data);
-        }
-        fetchData();
-    }, []);
+    // useEffect(() => {
+    //     async function fetchData() {
+    //         const response = await fetch("https://api.github.com/users/guillemrima");
+    //         const data = await response.json();
+    //         setProfileData(data);
+    //     }
+    //     fetchData();
+    // }, []);
 
-    const [repoData, setRepoData] = useState(mockupDefault);
-    useEffect(() => {
-        async function fetchData() {
-            const response = await fetch("https://api.github.com/users/guillemrima/repos");
-            let data = await response.json();
-            setRepoData(data[3]);
-        }
-        fetchData();
-    }, []);
+
+    // useEffect(() => {
+    //     async function fetchData() {
+    //         const response = await fetch("https://api.github.com/users/guillemrima/repos");
+    //         let data = await response.json();
+    //         setRepoData(data);
+    //     }
+    //     fetchData();
+    // }, []);
 
     return (
         <>
@@ -39,13 +42,7 @@ export default function App() {
                 avatar={profileData.avatar_url}
                 location={profileData.location}
             />
-            <Repocard
-                repo_name={repoData.name}
-                repo_stargazers={repoData.stargazers_count}
-                repo_forks={repoData.forks}
-                repo_description={repoData.description}
-                repo_private={repoData.private}
-            />
+            <Repogallery repoList = {repoData}/>
 
             <Navbar 
                 avatar={profileData.avatar_url}

@@ -1,5 +1,5 @@
 import React from "react";
-import mockup from "../assets/mockup"
+import mockup from "../assets/repomockup"
 import icon from './../assets/icons';
 import style from './style/repocard.module.css'
 
@@ -8,7 +8,7 @@ export default function Repocard(repoData) {
         <section className={style.repocardSection}>
             <div className={style.repocardContainer}>
                 <div className={style.titleContainer}>
-                    <div className={style.nameRepo}>
+                    <div className={style.nameRepoContainer}>
                         <h2>{repoData.repo_name}</h2>
                     </div>
                     <div className={style.starsContainer}>

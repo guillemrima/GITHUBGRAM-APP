@@ -13,6 +13,7 @@
     padding: 30px 70px;
     border-top: 1px solid rgb(183, 183, 183);
     box-shadow: 0px -1px 10px 0px rgb(198, 198, 198);
+    background-color: white;
 }
 
 .navbarContainer > .userElement {
