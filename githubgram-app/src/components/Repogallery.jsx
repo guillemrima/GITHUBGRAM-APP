@@ -7,7 +7,7 @@ export default function Repogallery(repoData){
     const repoCard = repoList.map(repoItem => {
         return (         
         <Repocard
-            key={repoItem.name}
+            key={repoItem.key}
             repo_name={repoItem.name}
             repo_stargazers={repoItem.stargazers_count}
             repo_forks={repoItem.forks}

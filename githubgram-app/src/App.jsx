@@ -42,6 +42,7 @@ export default function App() {
                 avatar={profileData.avatar_url}
                 location={profileData.location}
                 twitter={profileData.twitter_username}
+                key={profileData.id}
             />
             <Repogallery repoList = {repoData}/>
 
