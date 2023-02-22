@@ -1,0 +1,54 @@
+*{
+    font-family: roboto;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --marginGeneral : 10px;
+}
+
+.repocardSection {
+    margin: 15px;
+}
+
+.repocardContainer {
+    background-color: #efefef;
+    border-radius: 15px;
+    padding: 10px;
+}
+
+.titleContainer {
+    display: flex;
+    align-items: center;
+}
+
+.starsContainer {
+    display: flex;
+    margin-left: auto;
+}
+
+.starsContainer > p{
+    margin-top: 2px;
+}
+
+.forksContainer > p{
+    margin-top: 2px;
+}
+
+.imageContainer {
+    width: 20px;
+    height: 20px;
+}
+.imageContainer > img {
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
+}
+
+.forksContainer {
+    display: flex;
+    align-items: center;
+    margin-left: 6px;
+}

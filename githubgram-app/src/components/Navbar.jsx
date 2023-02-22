@@ -2,7 +2,7 @@ import React from "react";
 import icon from './../assets/icons';
 import style from './style/navbar.module.css';
 
-export default function Navbar() {
+export default function Navbar(profileData) {
     return(
         <section className={style.navbarSection}>
             
@@ -14,7 +14,7 @@ export default function Navbar() {
                     <img src={icon.searchIcon} />
                 </div>
                 <div className={style.userElement}>
-                    <img src={icon.userIcon} />
+                    <img src={profileData.avatar} />
                 </div>
             </div>
 
