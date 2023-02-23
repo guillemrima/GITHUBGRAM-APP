@@ -10,6 +10,12 @@ export default function Navbar(profileData) {
         width: "25px"
     }
     );
+    const [animationSearchBar, setAnimationSearchBar] = useState({
+        width : '0px',
+        opacity : '0%',
+        visibility: 'hidden'
+    }
+    );
 
     const animateIcon = () =>{
         setAnimationSearch({
@@ -18,6 +24,21 @@ export default function Navbar(profileData) {
             width: "15px",
             transition: "all 0.4s ease-out"
         })
+        setAnimationSearchBar({
+            opacity: '100%',
+            width: '130px',
+            visibility: 'visible',
+            transition: 'width 0.4s, opacity 0.2s ease-in'
+        })
+    }
+
+    const takeID = (e) =>{
+        e.preventDefault();
+        setValueID(e.target.value)
+    }
+
+    const sendID =(e) => {
+        setIDprop("valueID")
     }
 
     return(
@@ -31,7 +52,9 @@ export default function Navbar(profileData) {
                     <div onClick={animateIcon} className={style.searchIcon} style={animationSearch}>
                         <img src={icon.searchIcon} /> 
                     </div>
-                    <input className={style.searchUser} />
+                    <form>
+                    <input type='text' placeholder="Enter ID's user" className={style.searchUser} style={animationSearchBar}/>
+                    </form>
                 </div>
                 <div className={style.userElement}>
                     <img src={profileData.avatar} />

@@ -13,7 +13,7 @@ export default function App() {
 
     // useEffect(() => {
     //     async function fetchData() {
-    //         const response = await fetch("https://api.github.com/users/guillemrima");
+    //         const response = await fetch(`https://api.github.com/users/${Navbar.valueID}`);
     //         const data = await response.json();
     //         setProfileData(data);
     //     }
@@ -30,6 +30,7 @@ export default function App() {
     //     fetchData();
     // }, []);
 
+    
     return (
         <>
             <Profile 
