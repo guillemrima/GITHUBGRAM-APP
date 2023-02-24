@@ -1,39 +1,35 @@
 import React from 'react'
 import { useEffect, useState } from 'react'
-import Profile from './components/Profile'
 import mockupDefault from './assets/mockup'
 import mockupRepoDefault from './assets/repomockup'
+import Profile from './components/Profile'
 import Navbar from './components/Navbar';
 import Repogallery from './components/Repogallery';
 
 export default function App() {
     const [profileData, setProfileData] = useState(mockupDefault);
     const [repoData, setRepoData] = useState(mockupRepoDefault);
-    const [apiCallSuccess, setApiCallSuccess] = useState(false);
-
-    // useEffect(() => {
-    //     async function fetchData() {
-    //         const response = await fetch(`https://api.github.com/users/${Navbar.valueID}`);
-    //         const data = await response.json();
-    //         setProfileData(data);
-    //     }
-    //     fetchData();
-    // }, []);
-
-
-    // useEffect(() => {
-    //     async function fetchData() {
-    //         const response = await fetch("https://api.github.com/users/guillemrima/repos");
-    //         let data = await response.json();
-    //         setRepoData(data);
-    //     }
-    //     fetchData();
-    // }, []);
-
+    const [ userAPI, setUserAPI] = useState('');
     
+    async function hydrateUser(id) {
+        await setUserAPI(id);
+        console.log(userAPI);
+            const response = await fetch(`https://api.github.com/users/${userAPI}`);
+            const data = await response.json();
+            setProfileData(data);
+        
+
+
+        async function fetchData() {
+            const response = await fetch(`https://api.github.com/users/${userAPI}/repos`);
+            let data = await response.json();
+            setRepoData(data);
+        }
+        fetchData();
+    }
     return (
         <>
-            <Profile 
+        <Profile 
                 name={profileData.name}
                 nickname={profileData.login}
                 followers={profileData.followers}
@@ -44,12 +40,14 @@ export default function App() {
                 location={profileData.location}
                 twitter={profileData.twitter_username}
                 key={profileData.id}
-            />
+                />
             <Repogallery repoList = {repoData}/>
 
             <Navbar 
                 avatar={profileData.avatar_url}
+                onSubmit={hydrateUser}
             />
         </>
     )
-}
+
+    }

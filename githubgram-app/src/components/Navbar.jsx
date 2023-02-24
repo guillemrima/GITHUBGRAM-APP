@@ -3,7 +3,7 @@ import icon from './../assets/icons';
 import style from './style/navbar.module.css';
 import { useState } from "react"
 
-export default function Navbar(profileData) {
+export default function Navbar(profileData, hydrateUser) {
 
     const [animationSearch, setAnimationSearch] = useState({
         height: !"25px",
@@ -32,15 +32,17 @@ export default function Navbar(profileData) {
         })
     }
 
-    const takeID = (e) =>{
+    const [userID, setUserID] = useState("");
+
+
+    function takeID(e) {
+        setUserID(e.target.value)
+        console.log(userID)
+    }
+    async function ID  (e) {
         e.preventDefault();
-        setValueID(e.target.value)
+        profileData.onSubmit(userID)
     }
-
-    const sendID =(e) => {
-        setIDprop("valueID")
-    }
-
     return(
         <section className={style.navbarSection}>
             
@@ -52,15 +54,14 @@ export default function Navbar(profileData) {
                     <div onClick={animateIcon} className={style.searchIcon} style={animationSearch}>
                         <img src={icon.searchIcon} /> 
                     </div>
-                    <form>
-                    <input type='text' placeholder="Enter ID's user" className={style.searchUser} style={animationSearchBar}/>
+                    <form onSubmit = {ID}>
+                    <input type='text' value= {userID} onChange={takeID} placeholder="Enter ID's user" className={style.searchUser} style={animationSearchBar}/>
                     </form>
                 </div>
                 <div className={style.userElement}>
                     <img src={profileData.avatar} />
                 </div>
             </div>
-
         </section>
     )
 }
