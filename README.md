@@ -1,5 +1,5 @@
 # GITHUBGRAM-APP
-Github x Instagram made with React. 
+Github x Instagram Userface made with React. 
 
 Custom RRSS concept based on Instagram's interface and Github's data.
 
