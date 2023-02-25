@@ -18,4 +18,6 @@ Antes de comenzar a trabajar con esta aplicación, debes tener algunos conocimie
   1. Clona este repositorio en tu computadora local
   2. Abre una terminal y navega hasta el directorio del repositorio
   3. Instala las dependencias del proyecto utilizando el comando npm install
-  4. Crea un archivo .env en el directorio raíz del proyecto y agrega las siguientes variables de entorno:
+
+  
+![Captura de pantalla 2023-02-25 211449](https://user-images.githubusercontent.com/117720260/221377774-59a32d17-34ad-414a-aed0-790c15d8a6af.png)
